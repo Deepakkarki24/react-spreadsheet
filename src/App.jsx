@@ -24,6 +24,7 @@ const App = () => {
       <Header />
       {/* Top Toolbar */}
       <ToolBar />
+      <SpreadsheetTable />
     </div>
   );
 };
