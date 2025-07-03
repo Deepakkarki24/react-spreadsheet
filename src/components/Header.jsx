@@ -44,7 +44,9 @@ const Header = () => {
         <div className="flex items-center space-x-3">
           <button className="text-gray-600 hover:text-gray-800">
             <Bell className="w-5 h-5" />
-            <span className="bg-red-500 text-white text-xs rounded-full w-2 h-2 absolute -mt-6 ml-3"></span>
+            <span className="bg-green-800 text-white text-[8px] font-bold rounded-full w-3 h-3 absolute -mt-6">
+              2
+            </span>
           </button>
 
           <div className="flex items-center space-x-2">
@@ -52,8 +54,8 @@ const Header = () => {
               <User className="w-4 h-4 text-gray-600" />
             </div>
             <div className="flex flex-col">
-              <span className="text-sm text-gray-700">John Doe</span>
-              <span className="text-xs text-gray-500">john.doe</span>
+              <span className="text-sm text-gray-700">Deepak karki</span>
+              <span className="text-xs text-gray-500">deepak.karki</span>
             </div>
           </div>
         </div>

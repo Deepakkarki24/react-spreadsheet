@@ -3,6 +3,7 @@ import data from "./data";
 import ToolBar from "./components/ToolBar";
 import SpreadsheetTable from "./components/SpreadsheetTable";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const statusColor = {
   In_process: "bg-yellow-100 text-yellow-800",
@@ -19,12 +20,13 @@ const priorityColor = {
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-white text-sm font-sans">
+    <div className="min-h-screen relative bg-white text-sm font-sans">
       {/* Top Header */}
       <Header />
       {/* Top Toolbar */}
       <ToolBar />
       <SpreadsheetTable />
+      <Footer />
     </div>
   );
 };
