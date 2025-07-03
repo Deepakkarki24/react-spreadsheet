@@ -1,6 +1,8 @@
 import React from "react";
 import data from "./data";
 import ToolBar from "./components/ToolBar";
+import SpreadsheetTable from "./components/SpreadsheetTable";
+import Header from "./components/Header";
 
 const statusColor = {
   In_process: "bg-yellow-100 text-yellow-800",
@@ -17,7 +19,9 @@ const priorityColor = {
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-white text-sm py-6 font-sans">
+    <div className="min-h-screen bg-white text-sm font-sans">
+      {/* Top Header */}
+      <Header />
       {/* Top Toolbar */}
       <ToolBar />
     </div>

@@ -1,32 +1,37 @@
 import React from "react";
-import { TfiImport } from "react-icons/tfi";
-import { CiExport } from "react-icons/ci";
-import { FaRegShareSquare } from "react-icons/fa";
-import { GrTransaction } from "react-icons/gr";
 
-import { FaAnglesRight } from "react-icons/fa6";
-import { BiHide } from "react-icons/bi";
-import { MdImportExport } from "react-icons/md";
-import { IoFilterOutline } from "react-icons/io5";
-import { TbRotateRectangle } from "react-icons/tb";
+import {
+  ChevronLeft,
+  ChevronsRight,
+  Folder,
+  EyeOff,
+  Settings,
+  Filter,
+  LayoutGrid,
+  ArrowUpDown,
+  Upload,
+  Download,
+  Share2,
+  Plus,
+} from "lucide-react";
 
 const ToolBar = () => {
   const toolbarLeft = [
-    { tool: "Tool bar", icon: FaAnglesRight },
-    { tool: "Hide fields", icon: BiHide },
-    { tool: "Sort", icon: MdImportExport },
-    { tool: "Filter", icon: IoFilterOutline },
-    { tool: "Cell view", icon: TbRotateRectangle },
+    { tool: "Tool bar", icon: ChevronsRight },
+    { tool: "Hide fields", icon: EyeOff },
+    { tool: "Sort", icon: ArrowUpDown },
+    { tool: "Filter", icon: Filter },
+    { tool: "Cell view", icon: LayoutGrid },
   ];
 
   const toolbarRight = [
-    { tool: "Import", icon: TfiImport },
-    { tool: "Export", icon: CiExport },
-    { tool: "Share", icon: FaRegShareSquare },
-    { tool: "New Action", icon: GrTransaction },
+    { tool: "Import", icon: Download },
+    { tool: "Export", icon: Upload },
+    { tool: "Share", icon: Share2 },
+    { tool: "New Action", icon: Plus },
   ];
   return (
-    <div className="flex justify-between items-center mb-4 border border-gray-200 p-2">
+    <div className="flex justify-between items-center mb-4 border-b border-gray-200 px-4 py-2">
       <div className="flex gap-2">
         {toolbarLeft.map((tool, id) => {
           const Icon = tool.icon;
@@ -38,7 +43,7 @@ const ToolBar = () => {
             >
               {
                 <span className="flex items-center gap-1">
-                  <Icon />
+                  <Icon className="w-4 h-4 text-gray-400" />
                   {tool.tool}
                 </span>
               }
@@ -60,7 +65,7 @@ const ToolBar = () => {
               } border border-gray-200 rounded-[6px]`}
             >
               <span className="flex items-center gap-1">
-                <Icon />
+                <Icon className="w-4 h-4 text-gray-400" />
                 {tool.tool}
               </span>
             </button>
