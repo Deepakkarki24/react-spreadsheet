@@ -1,11 +1,8 @@
 import React from "react";
 
 import {
-  ChevronLeft,
   ChevronsRight,
-  Folder,
   EyeOff,
-  Settings,
   Filter,
   LayoutGrid,
   ArrowUpDown,
@@ -31,42 +28,47 @@ const ToolBar = () => {
     { tool: "New Action", icon: Plus },
   ];
   return (
-    <div className="flex justify-between items-center mb-4 border-b border-gray-200 px-4 py-2">
+    <div className="flex justify-between items-center border-b border-gray-200 px-4 py-2">
       <div className="flex gap-2">
-        {toolbarLeft.map((tool, id) => {
-          const Icon = tool.icon;
+        {toolbarLeft.map((item, id) => {
+          const Icon = item.icon;
           return (
             <button
               key={id}
-              onClick={() => console.log(`${tool.tool} clicked`)}
+              onClick={() => console.log(`${item.tool} clicked`)}
               className="px-3 py-2 bg-white rounded hover:bg-gray-200"
             >
-              {
+              {item.tool === "Tool Bar" ? (
+                <span className="flex items-center gap-1">
+                  {item.tool}
+                  <Icon className="w-4 h-4 text-gray-400" />
+                </span>
+              ) : (
                 <span className="flex items-center gap-1">
                   <Icon className="w-4 h-4 text-gray-400" />
-                  {tool.tool}
+                  {item.tool}
                 </span>
-              }
+              )}
             </button>
           );
         })}
       </div>
       <div className="flex gap-2">
-        {toolbarRight.map((tool, id) => {
-          const Icon = tool.icon;
+        {toolbarRight.map((item, id) => {
+          const Icon = item.icon;
           return (
             <button
               key={id}
-              onClick={() => console.log(`${tool} clicked`)}
+              onClick={() => console.log(`${item.tool} clicked`)}
               className={`px-4 py-2 ${
-                tool.tool === "New Action"
+                item.tool === "New Action"
                   ? "bg-green-800 text-white hover:bg-green-700"
                   : "bg-white hover:bg-gray-200"
               } border border-gray-200 rounded-[6px]`}
             >
               <span className="flex items-center gap-1">
                 <Icon className="w-4 h-4 text-gray-400" />
-                {tool.tool}
+                {item.tool}
               </span>
             </button>
           );
